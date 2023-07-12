@@ -22,7 +22,7 @@ public class Patient {
 		else
 			throw new ArrayIndexOutOfBoundsException("memory overloaded!");
 	}
-	public void addExposure() {
+	public void addExposure(Exposure exposures ) {
 		
 	}
 
