@@ -29,9 +29,9 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 			throw new IllegalStateException("No more Disease can be added");
 		} else {
 			if (infectious) {
-				return diseases[indexd++] = new InfectiousDisease();
+				return diseases[indexdisease++] = new InfectiousDisease();
 			} else {
-				return diseases[indexd++] = new NonInfectiousDisease();
+				return diseases[indexdisease++] = new NonInfectiousDisease();
 			}
 		}
 	}
@@ -59,7 +59,14 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
 	@Override
 	public Patient addPatient(String firstName, String LastName, int maxDiseases, int maxExposures) {
-		
+		if (me <= indexp) {
+			throw new IllegalStateException("No more Patients can be added");
+		} else {
+			patients[indexpatient]=new Patient(maxDiseases, maxExposures);
+			patients[indexpatient].setFirstName(firstName);
+			patients[indexpatient].setLastName(lastName);
+			return patients[indexpatient++];
+		}
 		
 		
 	}
@@ -80,7 +87,34 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
 	@Override
 	public void addDiseaseToPatient(UUID patientId, UUID diseaseId) {
-	
+	Disease ds=null;
+		Patient ps=null;
+		int dg=0,pg=0;
+		for (Disease d : diseases) {
+			if (d.diseaseId == diseaseId) {
+				ds=d;
+				dg=1;
+			}
+		}
+		if(dg==0)
+		{
+			throw new IllegalArgumentException("Disease not Found");
+		}
+		for (Patient p : patients) {
+			if (p.patientId == patientId) {
+				ps=p;
+				pg=1;
+			}
+		}
+		if(pg==0)
+		{
+			throw new IllegalArgumentException("Patient not Found");
+		}
+		if(dg==1&&pg==1)
+		{
+			ps.addDiseaseId(ds.diseaseId);
+		}
+		
 		
 
 	}
