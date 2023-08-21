@@ -1,9 +1,9 @@
 package edu.disease.asn1;
 import java.util.UUID;
-public abstract class Disease {
+public  class Disease {
 UUID diseaseld;
 String name;
-public abstract String[]  getExamples();
+// public abstract String[]  getExamples();
 public UUID getDiseaseld() {
 	return diseaseld;
 }
@@ -45,19 +45,19 @@ public String toString() {
 			+ getName() + ", hashCode()=" + hashCode() + "]";
 }
 }
-class InfectiousDisease extends Disease{
-	@Override
-	public String[] getExamples() {
-		String[] d1 = {"corona","diabetics","virus","AIDS"};
-		return d1;
-	}
-}
-class NonInfectiousDisease extends Disease{
+// class InfectiousDisease extends Disease{
+// 	@Override
+// 	public String[] getExamples() {
+// 		String[] d1 = {"corona","diabetics","virus","AIDS"};
+// 		return d1;
+// 	}
+// }
+// class NonInfectiousDisease extends Disease{
 
-	@Override
-	public String[] getExamples() {
-		String[] d2 = {"corona-2023" ,"diabetics -12","virus-23","fever-12"};
-		return d2;
-	}
+// 	@Override
+// 	public String[] getExamples() {
+// 		String[] d2 = {"corona-2023" ,"diabetics -12","virus-23","fever-12"};
+// 		return d2;
+// 	}
 	
-}
+// }
