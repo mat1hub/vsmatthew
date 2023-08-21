@@ -9,6 +9,7 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 	private Patient[] patients;
 	int md,me,indexdisease=0,indexpatient=0;
 	public DiseaseControlManagerImp(int maxDisease, int maxpatients) {
+		try{
 		if(maxDisease<=0 || maxpatients<=0) 
 			{
 			   throw new IllegalArgumentException("Invalid Data");
@@ -17,6 +18,10 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 			  diseases=new Disease[maxDiseases];
 			  patients=new Patient[maxPatient];
 	              }
+		}
+		catch(IllegalArgumentException e){
+			}
+
 
 	@Override
 	public Disease addDisease(String name, boolean infectious) {
