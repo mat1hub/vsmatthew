@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import edu.disease.asn1.Exposure;
 
-public class DiseaseControlManagerImp implements DiseaseControlManager {
+public class DiseaseControlManagerImpl implements DiseaseControlManager {
 	private Disease[] diseases;
 	private Patient[] patients;
 	int md,me,indexdisease=0,indexpatient=0;
