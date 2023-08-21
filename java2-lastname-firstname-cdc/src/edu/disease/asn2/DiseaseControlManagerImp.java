@@ -75,33 +75,7 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
 	@Override
 	public void addDiseaseToPatient(UUID patientId, UUID diseaseId) {
-	Disease ds=null;
-		Patient ps=null;
-		int dg=0,pg=0;
-		for (Disease d : diseases) {
-			if (d.diseaseId == diseaseId) {
-				ds=d;
-				dg=1;
-			}
-		}
-		if(dg==0)
-		{
-			throw new IllegalArgumentException("Disease not Found");
-		}
-		for (Patient p : patients) {
-			if (p.patientId == patientId) {
-				ps=p;
-				pg=1;
-			}
-		}
-		if(pg==0)
-		{
-			throw new IllegalArgumentException(" No Patient was found...>>>!");
-		}
-		if(dg==1&&pg==1)
-		{
-			ps.addDiseaseId(ds.diseaseId);
-		}
+	
 		
 
 	}
