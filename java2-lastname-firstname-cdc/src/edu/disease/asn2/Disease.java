@@ -44,3 +44,19 @@ public String toString() {
 			+ getName() + ", hashCode()=" + hashCode() + "]";
 }
 }
+class InfectiousDisease extends Disease{
+	@Override
+	public String[] getExamples() {
+		String[] d1 = {"corona","diabetics","virus","AIDS"};
+		return d1;
+	}
+}
+class NonInfectiousDisease extends Disease{
+
+	@Override
+	public String[] getExamples() {
+		String[] d2 = {"corona-2023" ,"diabetics -12","virus-23","fever-12"};
+		return d2;
+	}
+	
+}
