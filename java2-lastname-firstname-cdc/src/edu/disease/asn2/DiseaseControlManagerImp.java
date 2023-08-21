@@ -59,7 +59,7 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
 	@Override
 	public Patient addPatient(String firstName, String LastName, int maxDiseases, int maxExposures) {
-		if (me <= indexp) {
+		if (me <= indexpatient) {
 			throw new IllegalStateException("No more Patients can be added");
 		} else {
 			patients[indexpatient]=new Patient(maxDiseases, maxExposures);
