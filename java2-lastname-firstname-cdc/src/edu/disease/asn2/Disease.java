@@ -1,8 +1,9 @@
 package edu.disease.asn2;
 import java.util.UUID;
-public class Disease {
+public abstract class Disease {
 UUID diseaseld;
 String name;
+public abstract String[] getExamples();		
 public UUID getDiseaseld() {
 	return diseaseld;
 }
