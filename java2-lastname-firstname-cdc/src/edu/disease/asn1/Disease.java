@@ -5,22 +5,13 @@ import java.util.UUID;
  * The abstract class Disease represents a general concept of a disease.
  * It contains common fields and methods for various types of diseases.
  */
-public abstract class Disease {
+public  class Disease {
 
     /** The universally unique identifier (UUID) of the disease. */
     UUID diseaseId;
 
     /** The name of the disease. */
     String name;
-
-    /**
-     * Abstract method to be implemented by subclasses.
-     * Returns an array of example disease names.
-     *
-     * @return An array of example disease names.
-     */
-    public abstract String[] getExamples();
-
     /**
      * Gets the UUID of the disease.
      *
