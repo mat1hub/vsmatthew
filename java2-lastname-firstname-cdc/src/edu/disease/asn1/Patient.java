@@ -142,6 +142,56 @@ public class Patient {
 
 		}
 	}
+	public String getFirstName(){
+           return firstName;
+	}
+	public String setFirstName(String firstName){
+		this.firstName =firstName;
+	}
+	public String getLastName(){
+		return lastName;
+	}
+	public String setLastName(String lastName){
+		this.lastName =lastName;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((patientId == null) ? 0 : patientId.hashCode());
+		return result;
+	}
+
+	/**
+	 * Checks if the patient object is equal to another object.
+	 *
+	 * @param obj The object to compare with.
+	 * @return `true` if the objects are equal, otherwise `false`.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Patient other = (Patient) obj;
+		if (patientId == null) {
+			if (other.patientId != null)
+				return false;
+		} else if (!patientId.equals(other.patientId))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Patient [patientId=" + patientId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", exposures=" + Arrays.toString(exposures) + ", diseaseIds=" + Arrays.toString(diseaseIds)
+				+ ", maxDiseases=" + maxDiseases + ", maxExposures=" + maxExposures + ", index=" + index + "]";
+	}
+	
 }
 
 	
