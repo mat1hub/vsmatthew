@@ -123,3 +123,4 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 		}
 	
 }
+}
