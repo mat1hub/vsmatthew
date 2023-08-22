@@ -8,7 +8,7 @@ import java.util.UUID;
 public abstract class Disease {
 
     /** The universally unique identifier (UUID) of the disease. */
-    UUID diseaseld;
+    UUID diseaseId;
 
     /** The name of the disease. */
     String name;
@@ -26,8 +26,8 @@ public abstract class Disease {
      *
      * @return The UUID of the disease.
      */
-    public UUID getDiseaseld() {
-        return diseaseld;
+    public UUID getDiseaseId() {
+        return diseaseId;
     }
 
     /**
@@ -35,8 +35,8 @@ public abstract class Disease {
      *
      * @param diseaseld The UUID of the disease to set.
      */
-    public void setDiseaseld(UUID diseaseld) {
-        this.diseaseld = diseaseld;
+    public void setDiseaseId(UUID diseaseId) {
+        this.diseaseId = diseaseId;
     }
 
     /**
@@ -76,18 +76,18 @@ public abstract class Disease {
         if (getClass() != obj.getClass())
             return false;
         Disease other = (Disease) obj;
-        if (diseaseld == null) {
-            if (other.diseaseld != null)
+        if (diseaseId == null) {
+            if (other.diseaseId != null)
                 return false;
-        } else if (!diseaseld.equals(other.diseaseld))
+        } else if (!diseaseId.equals(other.diseaseId))
             return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "Disease [diseaseld=" + diseaseld + ", name=" + name
-               + ", getDiseaseld()=" + getDiseaseld() + ", getName()=" + getName()
+        return "Disease [diseaseId=" + diseaseId + ", name=" + name
+               + ", getDiseaseId()=" + getDiseaseId() + ", getName()=" + getName()
                + ", hashCode()=" + hashCode() + "]";
     }
 }
