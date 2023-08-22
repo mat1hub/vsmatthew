@@ -60,7 +60,7 @@ public class Patient implements Comparable<Patient>{
 		public void addDiseaseld(UUID diseaseld) {
 			try {
 			if(index < maxDisease)
-				diseaselds[index++]=diseaseld; 
+				diseaselds[index++]=diseaseId; 
 			
 			else {
 				throw new ArrayIndexOutOfBoundsException("memory overloaded!");
