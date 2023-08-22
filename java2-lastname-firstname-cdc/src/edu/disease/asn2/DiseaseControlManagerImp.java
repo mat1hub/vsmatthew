@@ -11,7 +11,7 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
     private Disease[] diseases;
     private Patient[] patients;
-
+    int md,me,indexd=0,indexp=0;
     /**
      * Constructor to create an instance of DiseaseControlManagerImp with maximum disease and patient limits.
      *
@@ -19,16 +19,31 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
      * @param maxpatients The maximum number of patients.
      */
     public DiseaseControlManagerImp(int maxDisease, int maxpatients) {
-        if (maxDisease <= 0 || maxpatients <= 0) {
-            // Handle invalid data
-        }
-        // Initialize arrays or collections to hold diseases and patients
+        if (maxDisease <= 0 || maxpatients <= 0) 
+          {
+					throw new IllegalArgumentException("Invalid Data");
+				}
+				else {
+					diseases=new Disease[maxDiseases];
+					patients=new Patient[maxPatient];
+		 }
+			
+		 catch(IllegalArgumentException e) {
+			 
+		 }
     }
 
     @Override
     public Disease addDisease(String name, boolean infectious) {
-        // To be implemented
-        return null;
+        if (md <= indexd) {
+			throw new IllegalStateException("No more Disease can be added");
+		} else {
+			if (infectious) {
+				return diseases[indexd++] = new InfectiousDisease();
+			} else {
+				return diseases[indexd++] = new NonInfectiousDisease();
+			}
+		}
     }
 
     @Override
@@ -43,11 +58,14 @@ public class DiseaseControlManagerImp implements DiseaseControlManager {
 
     @Override
     public Patient addPatient(String firstName, String LastName, int maxDiseases, int maxExposures) {
-        Patient patient = new Patient(maxDiseases, maxExposures);
-        patient.setFirstName(firstName);
-        // Set other patient attributes if needed
-        // Add the patient to the patients array or collection
-        return patient;
+	    if (me <= indexp) {
+			throw new IllegalStateException("No more Patients can be added");
+		} else {
+			patients[indexp]=new Patient(maxDiseases, maxExposures);
+			patients[indexp].setFirstName(firstName);
+			patients[indexp].setLastName(lastName);
+			return patients[indexp++];
+		}
     }
 
     @Override
