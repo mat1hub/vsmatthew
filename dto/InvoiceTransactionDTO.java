@@ -1,36 +1,36 @@
 package dto;
 
 public class InvoiceTransactionDTO {
-int invoice_id;
-public int getInvoice_id() {
+int invoiceId;
+public int getInvoiceId() {
 	return invoice_id;
 }
-public int getItem_id() {
+public int getItemId() {
 	return item_id;
 }
 public int getQty() {
 	return qty;
 }
-public void setInvoice_id(int invoice_id) {
+public void setInvoiceId(int invoiceId) {
 	this.invoice_id = invoice_id;
 }
-public void setItem_id(int item_id) {
-	this.item_id = item_id;
+public void setItemId(int itemId) {
+	this.itemId = itemId;
 }
 public void setQty(int qty) {
 	this.qty = qty;
 }
-int item_id;
+int itemId;
 @Override
 public String toString() {
-	return "InvoiceTransaction [invoice_id=" + invoice_id + ", item_id=" + item_id + ", qty=" + qty + "]";
+	return "InvoiceTransaction [invoice_id=" + invoiceId + ", item_id=" + itemId + ", qty=" + qty + "]";
 }
 @Override
 public int hashCode() {
 	final int prime = 31;
 	int result = 1;
-	result = prime * result + invoice_id;
-	result = prime * result + item_id;
+	result = prime * result + invoiceId;
+	result = prime * result + itemId;
 	return result;
 }
 @Override
@@ -42,9 +42,9 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	InvoiceTransactionDTO other = (InvoiceTransactionDTO) obj;
-	if (invoice_id != other.invoice_id)
+	if (invoiceId != other.invoiceId)
 		return false;
-	if (item_id != other.item_id)
+	if (itemId != other.itemId)
 		return false;
 	return true;
 }
