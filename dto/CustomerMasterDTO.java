@@ -1,10 +1,10 @@
 package dto;
 
 public class CustomerMasterDTO {
-int c_id;
-String c_name;
-String c_add;
-long c_telephone;
+int Cid;
+String Cname;
+String Cadd;
+long Ctelephone;
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -21,38 +21,38 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	CustomerMasterDTO other = (CustomerMasterDTO) obj;
-	if (c_id != other.c_id)
+	if (Cid != other.Cid)
 		return false;
 	return true;
 }
 @Override
 public String toString() {
-	return "CustomerMasterDTO [c_id=" + c_id + ", c_name=" + c_name + ", c_add=" + c_add + ", c_telephone="
-			+ c_telephone + "]";
+	return "CustomerMasterDTO [c_id=" + Cid + ", c_name=" + Cname + ", c_add=" + Cadd + ", c_telephone="
+			+ Ctelephone + "]";
 }
-public int getC_id() {
-	return c_id;
+public int getCid() {
+	return Cid;
 }
-public String getC_name() {
-	return c_name;
+public String getCname() {
+	return Cname;
 }
-public String getC_add() {
-	return c_add;
+public String getCadd() {
+	return Cadd;
 }
-public long getC_telephone() {
-	return c_telephone;
+public long getCtelephone() {
+	return Ctelephone;
 }
-public void setC_id(int c_id) {
-	this.c_id = c_id;
+public void setCid(int cid) {
+	this.Cid = c_id;
 }
-public void setC_name(String c_name) {
-	this.c_name = c_name;
+public void setCname(String cname) {
+	this.Cname = c_name;
 }
-public void setC_add(String c_add) {
-	this.c_add = c_add;
+public void setCadd(String cadd) {
+	this.Cadd = c_add;
 }
-public void setC_telephone(long c_telephone) {
-	this.c_telephone = c_telephone;
+public void setCtelephone(long ctelephone) {
+	this.Ctelephone = c_telephone;
 }
 
 
