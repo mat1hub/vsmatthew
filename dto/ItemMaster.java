@@ -2,7 +2,7 @@ package dto;
 
 import com.mysql.cj.jdbc.Blob;
 public class ItemMaster {
-int item_id;
+int itemId;
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -26,7 +26,7 @@ public boolean equals(Object obj) {
 		return false;
 	return true;
 }
-public int getItem_id() {
+public int getItemId() {
 	return item_id;
 }
 public String getItemname() {
@@ -41,8 +41,8 @@ public float getPrice() {
 public Blob getImage() {
 	return image;
 }
-public void setItem_id(int item_id) {
-	this.item_id = item_id;
+public void setItemId(int item_id) {
+	this.itemId = item_id;
 }
 public void setItemname(String itemname) {
 	this.itemname = itemname;
@@ -59,7 +59,7 @@ public void setImage(Blob image) {
 String itemname;
 @Override
 public String toString() {
-	return "ItemMaster [item_id=" + item_id + ", itemname=" + itemname + ", unit=" + unit + ", price=" + price
+	return "ItemMaster [item_id=" + itemId + ", itemname=" + itemname + ", unit=" + unit + ", price=" + price
 			+ ", image=" + image + "]";
 }
 String unit;
