@@ -43,16 +43,16 @@ public long getCtelephone() {
 	return Ctelephone;
 }
 public void setCid(int cid) {
-	this.Cid = c_id;
+	this.Cid = cid;
 }
 public void setCname(String cname) {
-	this.Cname = c_name;
+	this.Cname = cname;
 }
 public void setCadd(String cadd) {
-	this.Cadd = c_add;
+	this.Cadd = cadd;
 }
 public void setCtelephone(long ctelephone) {
-	this.Ctelephone = c_telephone;
+	this.Ctelephone = ctelephone;
 }
 
 
