@@ -23,9 +23,9 @@ public class CustomerMasterImp implements CustomerMasterDAO{
 		rs=ps.executeQuery();
 		CustomerMasterDTO cmt =new CustomerMasterDTO();
 		if(rs.next()) {
-		cmt.setC_name(rs.getString(1));
-		cmt.setC_id(rs.getInt(2));
-		cmt.setC_add(rs.getString(3));
+		cmt.setCname(rs.getString(1));
+		cmt.setCid(rs.getInt(2));
+		cmt.setCadd(rs.getString(3));
 		}
 		else {
 			rs.close();
@@ -42,9 +42,9 @@ public class CustomerMasterImp implements CustomerMasterDAO{
 	public int updateCustomerMaster(CustomerMasterDTO cmd)  {
 		try {
 			ps =con.prepareStatement("update into customermaster set c_name=?,c_add=? where cid=?");
-			ps.setString(1, cmd.getC_name());
-			ps.setString(2, cmd.getC_add());
-			ps.setInt(3, cmd.getC_id());
+			ps.setString(1, cmd.getCname());
+			ps.setString(2, cmd.getCadd());
+			ps.setInt(3, cmd.getCid());
 			int r =ps.executeUpdate();
 			con.close();
 			rs.close();
@@ -78,10 +78,10 @@ public class CustomerMasterImp implements CustomerMasterDAO{
 	public int addCustomerMaster(CustomerMasterDTO cmd)  {
 		try {
 		ps=con.prepareStatement("insert into customermaster values(?,?,?,?)");
-		ps.setInt(1,cmd.getC_id());
-		ps.setString(2, cmd.getC_name());
-		ps.setString(3, cmd.getC_add());
-		ps.setLong(4, cmd.getC_telephone());
+		ps.setInt(1,cmd.getCid());
+		ps.setString(2, cmd.getCname());
+		ps.setString(3, cmd.getCadd());
+		ps.setLong(4, cmd.getCtelephone());
 		int a =ps.executeUpdate();
 		return a;
 		}
@@ -97,10 +97,10 @@ public class CustomerMasterImp implements CustomerMasterDAO{
 		List<CustomerMasterDTO> lct =new ArrayList<CustomerMasterDTO>();
 		while(rs1.next()) {
 		   CustomerMasterDTO cmto  =new CustomerMasterDTO();
-		   cmto.setC_id(rs1.getInt(1));
-		   cmto.setC_name(rs1.getString(2));
-		   cmto.setC_add(rs1.getString(3));
-		   cmto.setC_telephone(rs1.getLong(4));
+		   cmto.setCid(rs1.getInt(1));
+		   cmto.setCname(rs1.getString(2));
+		   cmto.setCadd(rs1.getString(3));
+		   cmto.setCtelephone(rs1.getLong(4));
 		   lct.add(cmto);
 		}
 		return lct;
