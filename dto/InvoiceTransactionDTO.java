@@ -3,16 +3,16 @@ package dto;
 public class InvoiceTransactionDTO {
 int invoiceId;
 public int getInvoiceId() {
-	return invoice_id;
+	return invoiceId;
 }
 public int getItemId() {
-	return item_id;
+	return itemId;
 }
 public int getQty() {
 	return qty;
 }
 public void setInvoiceId(int invoiceId) {
-	this.invoice_id = invoice_id;
+	this.invoiceId = invoice_id;
 }
 public void setItemId(int itemId) {
 	this.itemId = itemId;
